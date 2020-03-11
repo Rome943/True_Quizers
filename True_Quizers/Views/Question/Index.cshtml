@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Questions>
+
+<h2>Questions</h2>
+<table class="table">
+    <tr>
+        <th>QuestionID</th>
+        <th>Question</th>
+        <th>Answer</th>
+    </tr>
+
+    @foreach (var questions in Model)
+    {
+        <tr>
+            <td><a href=/Question/ViewQuestion/@questions.QuestionID>@questions.QuestionID</a></td>
+            <td>@questions.Question</td>
+            <td>@questions.Answer</td>
+        </tr>
+
+    }
+</table>
+
