@@ -31,6 +31,18 @@ namespace True_Quizers.Controllers
 
             return View(question);
         }
+        public IActionResult ViewNextQuestion(int id)
+        {
+            var question = repo.GetNextQuestion(id);
+
+            return View(question);
+        }
+        public IActionResult ViewPreviousQuestion(int id)
+        {
+            var question = repo.GetPreviousQuestion(id);
+
+            return View(question);
+        }
 
 
     }

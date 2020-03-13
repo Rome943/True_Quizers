@@ -25,6 +25,16 @@ namespace True_Quizers
             return (Questions)_conn.QuerySingle<Questions>("SELECT * FROM Questions WHERE QuestionID = @id",
                 new { id = id });
         }
+        public Questions GetNextQuestion(int id)
+        {
+            return (Questions)_conn.QuerySingle<Questions>("SELECT * FROM Questions WHERE QuestionID = @id + 1",
+                new { id = id });
+        }
+        public Questions GetPreviousQuestion(int id)
+        {
+            return (Questions)_conn.QuerySingle<Questions>("SELECT * FROM Questions WHERE QuestionID = @id - 1",
+                new { id = id });
+        }
 
 
 

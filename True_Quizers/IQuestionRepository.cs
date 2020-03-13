@@ -8,5 +8,7 @@ namespace True_Quizers
     {
         public IEnumerable<Questions> GetAllQuestions();
         public Questions GetQuestion(int id);
+        public Questions GetNextQuestion(int id);
+        public Questions GetPreviousQuestion(int id);
     }
 }

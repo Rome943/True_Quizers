@@ -9,6 +9,6 @@ namespace True_Quizers.Models
 
         public int QuestionID { get; set; }
         public string Question { get; set; }
-        public string Answer { get; set; }
+        public string Answer { get; set; } 
     }
 }
